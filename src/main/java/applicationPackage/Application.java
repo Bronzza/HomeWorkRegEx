@@ -1,5 +1,7 @@
 package applicationPackage;
 
+import org.apache.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +18,6 @@ public class Application {
         List<Map<List<Set<Integer>>, String>> list = createMultiLayoutList();
         encodeToXMLformat(list, DECODED_FILE_NAME);
     }
-
     private static List<Map<List<Set<Integer>>, String>> createMultiLayoutList() {
         List<Map<List<Set<Integer>>, String>> list = new ArrayList<Map<List<Set<Integer>>, String>>();
         Set<Integer> set = new TreeSet<Integer>();
