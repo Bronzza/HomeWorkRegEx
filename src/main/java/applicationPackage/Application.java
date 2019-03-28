@@ -18,6 +18,7 @@ public class Application {
         List<Map<List<Set<Integer>>, String>> list = createMultiLayoutList();
         encodeToXMLformat(list, DECODED_FILE_NAME);
     }
+
     private static List<Map<List<Set<Integer>>, String>> createMultiLayoutList() {
         List<Map<List<Set<Integer>>, String>> list = new ArrayList<Map<List<Set<Integer>>, String>>();
         Set<Integer> set = new TreeSet<Integer>();
