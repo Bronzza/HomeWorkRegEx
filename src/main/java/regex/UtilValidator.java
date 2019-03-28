@@ -21,7 +21,8 @@ public class UtilValidator {
     }
 
     public static boolean ipValidator(String expectedIp) {
-        String ipPattern = "^\\d{1,3}[.]{1}\\d{1,3}[.]{1}\\d{1,3}[.]{1}\\d{1,3}$";
+        String ipPattern = "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.)" +
+                "{3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$";
         return checkPattern(ipPattern, expectedIp);
     }
 

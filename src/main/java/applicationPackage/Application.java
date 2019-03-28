@@ -1,9 +1,5 @@
 package applicationPackage;
 
-import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,20 +7,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import static xmlUtils.XmlUtils.encodeToXMLformat;
+
 public class Application {
     private final static String DECODED_FILE_NAME = "decod.txt";
 
     public static void main(String[] args) {
         List<Map<List<Set<Integer>>, String>> list = createMultiLayoutList();
-        XMLEncoder xmlEncoder = null;
-        try {
-            xmlEncoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(DECODED_FILE_NAME)));
-            xmlEncoder.writeObject(list);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            xmlEncoder.close();
-        }
+        encodeToXMLformat(list, DECODED_FILE_NAME);
     }
 
     private static List<Map<List<Set<Integer>>, String>> createMultiLayoutList() {

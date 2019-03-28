@@ -74,7 +74,7 @@ public class UtilValidatorTest {
 
     @Test
     public void ipValidator() {
-        String couldBeYourIp = "12.0.0.256";
+        String couldBeYourIp = "12.0.0.255";
         String couldBeYourIp1 = "0.0.0.1";
         String tooManyNumbers = "2117.1.1.19";
         String notEnoughNumbers = "27.03";
