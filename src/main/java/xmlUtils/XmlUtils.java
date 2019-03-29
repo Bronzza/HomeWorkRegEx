@@ -1,7 +1,5 @@
 package xmlUtils;
 
-import lombok.Getter;
-import lombok.Setter;
 import org.apache.log4j.Logger;
 
 import java.beans.XMLEncoder;
@@ -10,8 +8,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class XmlUtils {
-    @Getter
-    @Setter
     private static Logger logger = Logger.getLogger(XmlUtils.class);
 
     public static void encodeToXMLformat(Object objectToEncode, String fileName) {
